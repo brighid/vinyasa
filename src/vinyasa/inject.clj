@@ -85,7 +85,7 @@
 
 (defn inject [& args]
   (->> args
-       (mapcat inject-split-args)
+       inject-split-args
        (mapcat inject-row)
        vec))
 
